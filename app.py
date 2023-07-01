@@ -38,8 +38,8 @@ def main():
             if val == key:
                 return value
 
-    def load_model(model_file):
-        model = pickle.load(open(model_file, "rb"))
+    def load_model(model):
+        model = pickle.load(open(model, "rb"))
         return model
 
     if st.button("Predict"):
@@ -54,7 +54,7 @@ def main():
         st.write(user_input_data)
         st.subheader("Predicted Selling Price")
         input_data = np.array(feature_list).reshape(1, -1)
-        model =load_model("final_model.pkl")
+        model =load_model("model.pkl")
         prediction = model.predict(input_data)
         st.write("Predicted Selling Price :" + " " + "₹" +" " + str(np.round(prediction[0], 2)))
 
