@@ -1,0 +1,6 @@
+[server]
+headless = true
+port = $PORT
+
+[deploy]
+command = "bash setup.sh"
