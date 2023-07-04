@@ -10,16 +10,8 @@ def main():
     image = Image.open('logo.png')
     st.title("Car_Price_Predictor")
 
-    st.sidebar.image(image, caption=f"Suri Enterprises Pvt. Ltd.", use_column_width=True)
-    st.sidebar.subheader("Welcome to The Suri Enterprises Pvt. Ltd !")
 
-    st.sidebar.subheader(
-        "We rent and sales cars. This company is based on second hand or branded new cars. All the facility are available here.")
-    st.sidebar.write("Ravi Ranjan ", "\n", "Chairman & CEO")
-    st.sidebar.subheader('Contact Us.  \n'
-                         'Email:-  ranjeet.suri241@gmail.com')
 
-    st.sidebar.subheader("+91 75491 19745")
 
     owner1 = {"First Owner": 1, "Second Owner": 2, "Third Owner": 3, "Fourth Owner and Above Owner": 4,
               "Test Drive Car": 5}
@@ -33,7 +25,6 @@ def main():
               "Isuzu": 28, "Kia ": 29}
     engine1 = {"Diesel": 1, "Patrol": 2, "CNG": 3, "LPG": 4,"Electric": 5}
 
-    name = st.text_input("Enter Car model Name")
     brand = st.selectbox("Brand", tuple(brand1.keys()))
     year = st.number_input("Year of purchase", 1900, 2023)
     driver = st.number_input("Driver(KM)")
@@ -67,7 +58,7 @@ def main():
         prediction = model.predict(input_data)
         st.write("Predicted Selling Price :" + " " + "₹" +" " + str(np.round(prediction[0], 2)))
 
-        st.subheader(''' Thank you for your visit !''')
+     
 
 
 if __name__ == "__main__":
