@@ -48,7 +48,7 @@ def main():
                         get_value(seller_type, seller1)]
         # st.write(feature_list)
         st.subheader("Your Input")
-        user_input_data = {"Name": name, "Brand": brand, "Year of purchase": year, "Drive(KM)": driver,
+        user_input_data = {"Brand": brand, "Year of purchase": year, "Drive(KM)": driver,
                            "Owner_Type": owner_type, "Engine Type": engine_type, "Transmission Type": transmission_type,
                            "Seller Type": seller_type}
         st.write(user_input_data)
