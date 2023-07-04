@@ -46,8 +46,7 @@ def main():
         feature_list = [get_value(brand, brand1), int(year), int(driver), get_value(owner_type, owner1),
                         get_value(engine_type, engine1), get_value(transmission_type, transmission1),
                         get_value(seller_type, seller1)]
-     
-        st.write(user_input_data)
+       
         st.subheader("Predicted Selling Price")
         input_data = np.array(feature_list).reshape(1, -1)
         model =load_model("final_model.pkl")
