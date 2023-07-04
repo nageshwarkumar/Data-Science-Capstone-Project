@@ -5,10 +5,8 @@ import pickle
 import requests
 
 def main():
-    # Categorical inputs
-
-    image = Image.open('logo.png')
-    st.title("Car_Price_Predictor")
+  
+    st.title("Used Car Price Predictor")
 
 
 
