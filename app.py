@@ -49,7 +49,7 @@ def main():
         input_data = np.array(feature_list).reshape(1, -1)
         model =load_model("final_model.pkl")
         prediction = model.predict(input_data)
-        st.write("Predicted Selling Price :" + " " + "₹" +" " + str(np.round(prediction[0], 2)))
+        st.write("Price :" + " " + "₹" +" " + str(np.round(prediction[0], 2)))
 
      
 
